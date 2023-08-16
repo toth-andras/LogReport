@@ -29,7 +29,7 @@ public class LogReportCreator : ILogReportCreator
             var recordCategory = match.Groups[2].Value.Trim('[', ']');
             
             // I do not understand, what is the purpose of anonymizing,
-            // as there is no saving log records's text.
+            // as there is no saving log records' text.
             var recordMessage = EmailAnonymizerService.AnonymizeEmails(match.Groups[3].Value);
 
             earliestDateTime ??= recordDate;
