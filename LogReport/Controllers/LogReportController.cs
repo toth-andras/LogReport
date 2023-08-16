@@ -25,7 +25,7 @@ public class LogReportController : ControllerBase
     /// <param name="directoryPath">Path to directory with log files.</param>
     /// <param name="request">Service name(regex enabled).</param>
     [HttpGet("GetReport")]
-    public ObjectResult GetReport(string directoryPath, string request)
+    public async Task<ObjectResult> GetReport(string directoryPath, string request)
     {
         try
         {
